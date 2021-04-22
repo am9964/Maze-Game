@@ -44,7 +44,10 @@ Bellman–Ford proceeds by **relaxation**, in which approximations to the correc
 
 <img src = "assets/algo.png">
 
-The algorithm initializes the distance to the source to 0 and all other nodes to infinity. Then for all edges, if the distance to the destination can be shortened by taking the edge, the distance is updated to the new lower value. At each iteration i that the edges are scanned, the algorithm finds all shortest paths of at most length i edges (and possibly some paths longer than i edges). Since the longest possible path without a cycle can be |V|-1 edges, the edges must be scanned |V|-1 times to ensure the shortest path has been found for all nodes. A final scan of all the edges is performed and if any distance is updated, then a path of length |V| edges has been found. The Bellman-Ford Algorithm is a **dynamic programming** approach.
+The algorithm initializes the distance to the source to 0 and all other nodes to infinity. Then for all edges, if the distance to the destination can be shortened by taking the edge, the distance is updated to the new lower value. At each iteration i that the edges are scanned, the algorithm finds all shortest paths of at most length i edges (and possibly some paths longer than i edges). Since the longest possible path without a cycle can be |V|-1 edges, the edges must be scanned |V|-1 times to ensure the shortest path has been found for all nodes. A final scan of all the edges is performed and if any distance is updated, then a path of length |V| edges has been found. The Bellman-Ford Algorithm is a **dynamic programming** approach. <br>
+
+**Time complexity**: **O(VxE)** where V and E are total number of vertices and edges respectively. <br>
+Assuming V and E as n the time complexity is calculated to be **O(n<sup>2</sup>)**. The worst case time is however calculated to be **O(n<sup>3</sup>)** which occurs in case of a *complete graph*.
 
 ## Usage Guidelines
 - Cloning the Repository: 
@@ -64,3 +67,9 @@ The algorithm initializes the distance to the source to 0 and all other nodes to
         Ctrl+C
 
 <hr>
+
+## Reference:
+- <a href = "https://youtu.be/FtN3BYH2Zes">Bellman Ford Algorithm - Single Source Shortest Path - Dynamic Programming</a>
+- <a href = "https://www.geeksforgeeks.org/bellman-ford-algorithm-dp-23/">Bellman–Ford Algorithm | DP-23</a>
+- <a href = "https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm">Bellman–Ford algorithm - Wikipedia</a>
+- <a href = "https://stackoverflow.com/questions/19482317/bellman-ford-vs-dijkstra-under-what-circumstances-is-bellman-ford-better#:~:text=Bellman%2DFord%20algorithm%20is%20a,Algorithm%20can%20only%20handle%20positives.">Bellman-Ford vs Dijkstra</a>
