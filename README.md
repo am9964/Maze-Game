@@ -13,7 +13,17 @@ The task is to choose the most efficient algorithm possible for the specific cas
 <hr>
 
 ## Approach
-Convert the maze to a weighted graph G (V, E). Each location (i, j) in the maze corresponds to a node in the graph. The problem can have multiple solutions. One can use any design technique such as greedy method, backtracking, dynamic programming. Students can choose their own conditions, positive or negative costs for the graph.
+Convert the maze to a weighted graph G (V, E). Each location (i, j) in the maze corresponds to a node in the graph. The problem can have multiple solutions. One can use any design technique such as greedy method, backtracking, dynamic programming and choose their own conditions, positive or negative costs for the graph.
+According to thequestions, a cost is attached to visiting each node. So the cost of visiting node[j] is equivalent to cost_matrix[j].
+
+Let us consider a simple maze along with its cost matrix.
+
+<img src = "assets/maze_grid.png"> <img src = "assets/cost.png">
+
+Assuming all 0s as vertices and taking the top left corner as the source vertex, the resulting graph would look like:
+
+<img src = "assets/graph.png" align = "center">
+
 <hr>
 
 ## Proposed Solution
