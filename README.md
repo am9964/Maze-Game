@@ -7,6 +7,9 @@ One may solve the problem after imposing/relaxing other restrictions on the abov
 - No. of destinations possible
 
 The task is to choose the most efficient algorithm possible for the specific case.
+
+<center><img src = "assets/maze.png"></center>
+
 <hr>
 
 ## Approach
