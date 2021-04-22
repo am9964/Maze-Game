@@ -8,7 +8,7 @@ One may solve the problem after imposing/relaxing other restrictions on the abov
 
 The task is to choose the most efficient algorithm possible for the specific case.
 
-<center><img src = "assets/maze.png"></center>
+<img src = "assets/maze.png"> <img src = "assets/maze2.png" height = 310px>
 
 <hr>
 
