@@ -13,26 +13,54 @@ The task is to choose the most efficient algorithm possible for the specific cas
 <hr>
 
 ## Approach
-Convert the maze to a weighted graph G (V, E). Each location (i, j) in the maze corresponds to a node in the graph. The problem can have multiple solutions. One can use any design technique such as greedy method, backtracking, dynamic programming and choose their own conditions, positive or negative costs for the graph.
-According to thequestions, a cost is attached to visiting each node. So the cost of visiting node[j] is equivalent to cost_matrix[j].
+Convert the maze to a weighted graph G (V, E). Each location (i, j) in the maze corresponds to a *node* in the graph. The problem can have multiple solutions. One can use any design technique such as greedy method, backtracking, dynamic programming and choose their own conditions, positive or negative costs for the graph.
+According to thequestions, a cost is attached to visiting each node. So the **cost of visiting node[j] is equivalent to cost_matrix[j].**
 
 Let us consider a simple maze along with its cost matrix.
 
 <img src = "assets/maze_grid.png"> <img src = "assets/cost.png">
 
-Assuming all 0s as vertices and taking the top left corner as the source vertex, the resulting graph would look like:
+**Assuming all 0s as vertices and taking the top left corner as the source vertex, the resulting graph would look like:**
 
-<p align = "center"><img src = "assets/graph.png" align = "center"></p>
+<p align = "center">
+<kbd>
+  <img src = "assets/graph.png">
+</kbd>
+</p>
 
+Once we have identified our edges, we create a **vector object of structure** which is of the form shown below and **push all the edges and associated cost into it.**
+
+#### struct Edge { <br>
+#### &nbsp;&nbsp;&nbsp;&nbsp;int source, dest, cost; <br>
+#### };
 <hr>
 
-## Proposed Solution
-We must find the 'single source shortest path', with one vertex in a directed weighted graph as source and find shortest path to all other vertices. The presence of negative edges prevents us from using the Dijkstra's Algorithm as it does not give a correct solution in case of negative edges. 
-However, we may use the 'Bellman-Ford Algorithm' for our purpose. The 'Bellman-Ford Algorithm' assumes one vertex as the source and finds the shortest path to all other vertices even when negative edges are present, i.e. finds the path with minimum cost. 
+## Proposed Method
+We must find the **'single source shortest path'**, with one vertex in a directed weighted graph as source and find shortest path to all other vertices. The presence of negative edges prevents us from using the **Dijkstra's Algorithm** as it does not give a correct solution in case of negative edges. 
+However, we may use the 'Bellman-Ford Algorithm' for our purpose. The **'Bellman-Ford Algorithm'** assumes one vertex as the source and finds the shortest path to all other vertices even when negative edges are present, i.e. finds the path with minimum cost. 
 
-### Bellman-Ford Algorithm
-Bellman–Ford proceeds by relaxation, in which approximations to the correct distance are replaced by better ones until they eventually reach the solution. The Bellman–Ford algorithm simply relaxes all the edges, and does this |V|-1 times, where |V| is the number of vertices in the graph. In each of these repetitions, the number of vertices with correctly calculated distances grows, from which it follows that eventually all vertices will have their correct distances.
+### The Bellman-Ford Algorithm
+Bellman–Ford proceeds by **relaxation**, in which approximations to the correct distance are replaced by better ones until they eventually reach the solution. The Bellman–Ford algorithm simply relaxes all the edges, and does this **|V|-1 times**, where *|V| is the number of vertices* in the graph. In each of these repetitions, the number of vertices with correctly calculated distances grows, from which it follows that eventually all vertices will have their correct distances.
 
 <img src = "assets/algo.png">
 
-The algorithm initializes the distance to the source to 0 and all other nodes to infinity. Then for all edges, if the distance to the destination can be shortened by taking the edge, the distance is updated to the new lower value. At each iteration i that the edges are scanned, the algorithm finds all shortest paths of at most length i edges (and possibly some paths longer than i edges). Since the longest possible path without a cycle can be |V|-1 edges, the edges must be scanned |V|-1 times to ensure the shortest path has been found for all nodes. A final scan of all the edges is performed and if any distance is updated, then a path of length |V| edges has been found
+The algorithm initializes the distance to the source to 0 and all other nodes to infinity. Then for all edges, if the distance to the destination can be shortened by taking the edge, the distance is updated to the new lower value. At each iteration i that the edges are scanned, the algorithm finds all shortest paths of at most length i edges (and possibly some paths longer than i edges). Since the longest possible path without a cycle can be |V|-1 edges, the edges must be scanned |V|-1 times to ensure the shortest path has been found for all nodes. A final scan of all the edges is performed and if any distance is updated, then a path of length |V| edges has been found. The Bellman-Ford Algorithm is a **dynamic programming** approach.
+
+## Usage Guidelines
+- Cloning the Repository: 
+
+        git clone https://github.com/am9964/Maze-Game
+- Entering The directory: 
+
+        cd Maze-Game
+- Compiling the program:
+
+         g++ -std=c++11 maze.cpp
+- Running the file:
+        
+        ./a.out
+- Stopping from the terminal:
+
+        Ctrl+C
+
+<hr>
