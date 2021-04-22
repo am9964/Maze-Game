@@ -22,7 +22,7 @@ Let us consider a simple maze along with its cost matrix.
 
 Assuming all 0s as vertices and taking the top left corner as the source vertex, the resulting graph would look like:
 
-<img src = "assets/graph.png" align = "center">
+<p align = "center"><img src = "assets/graph.png" align = "center"></p>
 
 <hr>
 
