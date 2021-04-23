@@ -68,6 +68,11 @@ Assuming V and E as n the time complexity is calculated to be **O(n<sup>2</sup>)
 
 <hr>
 
+## Result:
+Upon running the commands on the terminal and entering values mentioned in the above graph, we got the following output:
+
+<img src = "assets/result.png">
+
 ## Reference:
 - <a href = "https://youtu.be/FtN3BYH2Zes">Bellman Ford Algorithm - Single Source Shortest Path - Dynamic Programming</a>
 - <a href = "https://www.geeksforgeeks.org/bellman-ford-algorithm-dp-23/">Bellman–Ford Algorithm | DP-23</a>
